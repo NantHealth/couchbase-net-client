@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>Couchbase.Tests</RootNamespace>
     <AssemblyName>Couchbase.Tests</AssemblyName>
     <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
@@ -11,9 +11,9 @@
     <NoWarn>1701,0618</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(OS)'=='Windows_NT'">
+  <!--<PropertyGroup Condition="'$(OS)'=='Windows_NT'">
     <TargetFrameworks>$(TargetFrameworks);net452</TargetFrameworks>
-  </PropertyGroup>
+  </PropertyGroup>-->
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
     <DefineConstants>$(DefineConstants);NET452</DefineConstants>

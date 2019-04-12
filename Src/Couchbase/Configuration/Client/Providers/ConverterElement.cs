@@ -1,4 +1,4 @@
-﻿#if NET452
+//#if NET452
 using System.Configuration;
 using Couchbase.Core.Transcoders;
 using Couchbase.IO.Converters;
@@ -44,7 +44,7 @@ namespace Couchbase.Configuration.Client.Providers
     }
 }
 
-#endif
+//#endif
 
 #region [ License information          ]
 

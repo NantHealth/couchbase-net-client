@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Couchbase.Configuration.Client;
 
-#if NET452
+//#if NET452
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase.Core.Transcoders
 {
@@ -22,7 +22,7 @@ namespace Couchbase.Core.Transcoders
             return () => new DefaultTranscoder(config.Converter(), config.Serializer());
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// Gets a Func for creating <see cref="ITypeTranscoder"/> transcoders.
@@ -35,7 +35,7 @@ namespace Couchbase.Core.Transcoders
             return GetTranscoder(config, element.Type);
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// Gets a Func for creating <see cref="ITypeTranscoder"/> transcoders.

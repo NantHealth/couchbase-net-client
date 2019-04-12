@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -94,11 +94,11 @@ namespace Couchbase.IO.Http
                 {
                     ClientCertificateOptions = ClientCertificateOption.Manual
                 };
-#if NETSTANDARD
+//#if NETSTANDARD
                 handler.SslProtocols = SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12;
                 handler.ClientCertificates.AddRange(config.CertificateFactory());
 
-#endif
+//#endif
             }
             else
             {

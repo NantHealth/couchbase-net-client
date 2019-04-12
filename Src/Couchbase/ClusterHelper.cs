@@ -7,10 +7,10 @@ using Couchbase.Configuration.Client;
 using Couchbase.Core;
 using Couchbase.Utils;
 
-#if NET452
+//#if NET452
 using System.Configuration;
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase
 {
@@ -320,7 +320,7 @@ namespace Couchbase
             Initialize(factory);
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// Ctor for creating Cluster instance.
@@ -338,7 +338,7 @@ namespace Couchbase
             Initialize(factory);
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// Returns the number of <see cref="IBucket"/> instances internally cached by the <see cref="ClusterHelper"/>.

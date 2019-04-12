@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Couchbase.Configuration.Client;
 
-#if NET452
+//#if NET452
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase.Core.Serialization
 {
@@ -22,7 +22,7 @@ namespace Couchbase.Core.Serialization
             return () => new DefaultSerializer();
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// Gets the serializer.
@@ -35,7 +35,7 @@ namespace Couchbase.Core.Serialization
             return GetSerializer(element.Type);
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// Gets the serializer.

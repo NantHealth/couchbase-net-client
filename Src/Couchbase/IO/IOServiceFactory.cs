@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Reflection;
 using Couchbase.Configuration.Client;
 using Couchbase.IO.Services;
 
-#if NET452
+//#if NET452
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase.IO
 {
@@ -33,7 +33,7 @@ namespace Couchbase.IO
             };
         }
 
-#if NET452
+//#if NET452
 
         /// <exception cref="TypeLoadException">Condition.</exception>
         /// <exception cref="TargetInvocationException">A class initializer is invoked and throws an exception. </exception>
@@ -43,7 +43,7 @@ namespace Couchbase.IO
             return GetFactory(element.Type);
         }
 
-#endif
+//#endif
 
         /// <exception cref="TypeLoadException">Condition.</exception>
         /// <exception cref="TargetInvocationException">A class initializer is invoked and throws an exception. </exception>

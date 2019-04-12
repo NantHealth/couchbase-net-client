@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.Serialization;
 
 
@@ -23,14 +23,14 @@ namespace Couchbase.Configuration
         {
         }
 
-#if NET452
+//#if NET452
         /// <exception cref="ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
         /// <exception cref="SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
         protected CouchbaseBootstrapException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
-#endif
+//#endif
     }
 }
 

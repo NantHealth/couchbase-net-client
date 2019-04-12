@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.Serialization;
 
 namespace Couchbase.Configuration
@@ -25,11 +25,11 @@ namespace Couchbase.Configuration
         {
         }
 
-#if NET452
+//#if NET452
         protected ConfigException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
-#endif
+//#endif
     }
 }
 

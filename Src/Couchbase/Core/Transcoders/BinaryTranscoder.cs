@@ -1,4 +1,4 @@
-﻿#if NET452
+//#if NET452
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -58,7 +58,7 @@ namespace Couchbase.Core.Transcoders
         }
     }
 }
-#endif
+//#endif
 
 #region [ License information          ]
 

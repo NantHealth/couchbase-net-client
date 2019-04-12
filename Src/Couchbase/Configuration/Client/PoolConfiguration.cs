@@ -4,9 +4,9 @@ using Couchbase.IO;
 using Couchbase.Utils;
 using Newtonsoft.Json;
 
-#if NET452
+//#if NET452
 using System.Configuration;
-#endif
+//#endif
 
 namespace Couchbase.Configuration.Client
 {
@@ -25,9 +25,9 @@ namespace Couchbase.Configuration.Client
     /// ConnectTimeout = 10000;
     /// </remarks>
     public sealed class PoolConfiguration
-#if NET452
+//#if NET452
         : ConfigurationElement
-#endif
+//#endif
     {
         private int _maxSize;
         private int _minSize;

@@ -22,12 +22,12 @@ using Couchbase.Utils;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 using OpenTracing;
-#if NET452
+//#if NET452
 using Couchbase.Configuration.Client.Providers;
-#endif
-#if NETSTANDARD
+//#endif
+//#if NETSTANDARD
 using Microsoft.Extensions.Logging;
-#endif
+//#endif
 
 namespace Couchbase.Configuration.Client
 {
@@ -201,9 +201,9 @@ namespace Couchbase.Configuration.Client
             //The default sasl mechanism creator
             CreateSaslMechanism = SaslFactory.GetFactory();
 
-#if NETSTANDARD
+//#if NETSTANDARD
             LoggerFactory = new LoggerFactory();
-#endif
+//#endif
 
             PoolConfiguration = new PoolConfiguration(this)
             {
@@ -232,7 +232,7 @@ namespace Couchbase.Configuration.Client
             _poolConfigurationChanged = false;
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// For synchronization with App.config or Web.configs.
@@ -242,7 +242,7 @@ namespace Couchbase.Configuration.Client
         {
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// For synchronization with App.config or Web.configs.
@@ -316,10 +316,10 @@ namespace Couchbase.Configuration.Client
                 ? typeof(PooledIOService).FullName : definition.IOService)
                 : IOServiceFactory.GetFactory(this);
 
-#if NETSTANDARD
+//#if NETSTANDARD
             //TODO not implemented for json configs...yet, so default
              LoggerFactory = new LoggerFactory();
-#endif
+//#endif
 
             //to enable tcp keep-alives
             EnableTcpKeepAlives = definition.EnableTcpKeepAlives;
@@ -679,9 +679,9 @@ namespace Couchbase.Configuration.Client
         [JsonIgnore]
         internal Func<string, string, IConnectionPool, ITypeTranscoder, ISaslMechanism> CreateSaslMechanism { get; set; }
 
-#if NETSTANDARD
+//#if NETSTANDARD
         public ILoggerFactory LoggerFactory { get; set; }
-#endif
+//#endif
 
         /// <summary>
         /// Set to true to use Secure Socket Layers (SSL) to encrypt traffic between the client and Couchbase server.
@@ -1096,10 +1096,10 @@ namespace Couchbase.Configuration.Client
             {
                 throw new ArgumentOutOfRangeException(ExceptionUtil.HeartbeatConfigIntervalMsg);
             }
-#if NETSTANDARD
+//#if NETSTANDARD
             //configure logging
             LogManager.ConfigureLoggerFactory(LoggerFactory);
-#endif
+//#endif
             if (PoolConfiguration == null)
             {
                 PoolConfiguration = new PoolConfiguration(this);

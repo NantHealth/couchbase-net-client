@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Net;
 using Couchbase.Configuration.Client;
 
-#if NET452
+//#if NET452
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase.IO
 {
@@ -34,7 +34,7 @@ namespace Couchbase.IO
             };
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// Gets the factory.
@@ -45,7 +45,7 @@ namespace Couchbase.IO
             return GetFactory(element.Type);
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// Gets the factory.

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Net.Security;
 using System.Reflection;
@@ -39,8 +39,16 @@ namespace Couchbase.UnitTests.IO.Http
             var handler = (AuthenticatingHttpClientHandler) typeof(HttpMessageInvoker)
                 .GetField("handler", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(httpClient);
 #else
-            var handler = (AuthenticatingHttpClientHandler) typeof(HttpMessageInvoker)
-                .GetField("_handler", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(httpClient);
+            var c = typeof(HttpMessageInvoker).GetField("_handler", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            if (c == null)
+            {
+                c = typeof(HttpMessageInvoker).GetField("handler", BindingFlags.Instance | BindingFlags.NonPublic);
+            }
+
+            var handler = (AuthenticatingHttpClientHandler)c.GetValue(httpClient);
+            //var handler = (AuthenticatingHttpClientHandler) typeof(HttpMessageInvoker)
+            //    .GetField("_handler", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(httpClient);
 #endif
 
 #if NET452

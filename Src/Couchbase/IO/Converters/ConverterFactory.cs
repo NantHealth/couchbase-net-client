@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Reflection;
 
-#if NET452
+//#if NET452
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase.IO.Converters
 {
@@ -21,7 +21,7 @@ namespace Couchbase.IO.Converters
             return () => new DefaultConverter();
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// Gets a <see cref="Func{IByteConverter}"/> factory for custom <see cref="IByteConverter"/>s conifgured in the App.Config.
@@ -33,7 +33,7 @@ namespace Couchbase.IO.Converters
             return GetConverter(element.Type);
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// Gets a <see cref="Func{IByteConverter}"/> factory for custom <see cref="IByteConverter"/>s conifgured in the App.Config.

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.Serialization;
 
 namespace Couchbase.Core.Services
@@ -22,12 +22,12 @@ namespace Couchbase.Core.Services
         {
         }
 
-#if NET452
+//#if NET452
         protected ServiceNotSupportedException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
-#endif
+//#endif
     }
 }
 

@@ -20,10 +20,10 @@ using Couchbase.Utils;
 using Couchbase.Views;
 using Newtonsoft.Json;
 
-#if NET452
+//#if NET452
 using System.Configuration;
 using Couchbase.Configuration.Client.Providers;
-#endif
+//#endif
 
 namespace Couchbase
 {
@@ -59,7 +59,7 @@ namespace Couchbase
         {
         }
 
-#if NET452
+//#if NET452
 
         /// <summary>
         /// Ctor for creating Cluster instance using an App.Config or Web.config.
@@ -71,7 +71,7 @@ namespace Couchbase
         {
         }
 
-#endif
+//#endif
 
         /// <summary>
         /// Ctor for creating Cluster instance with a custom <see cref="ClientConfiguration"/> configuration.

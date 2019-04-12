@@ -1,7 +1,7 @@
-﻿using System;
-#if NETSTANDARD
+using System;
+//#if NETSTANDARD
 using Microsoft.Extensions.Logging;
-#endif
+//#endif
 
 namespace Couchbase.Logging
 {
@@ -21,7 +21,7 @@ namespace Couchbase.Logging
         }
 #endif
 
-#if NETSTANDARD
+//#if NETSTANDARD
         private static ILoggerFactory _factory;
 
         public static void ConfigureLoggerFactory(ILoggerFactory factory)
@@ -37,7 +37,7 @@ namespace Couchbase.Logging
             }
             return new MicrosoftLoggingLogger(_factory.CreateLogger(type));
         }
-#endif
+//#endif
     }
 }
 

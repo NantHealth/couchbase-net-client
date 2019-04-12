@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-#if NET452
+//#if NET452
 using System.Runtime.Serialization;
-#endif
+//#endif
 
 namespace Couchbase.Configuration.Server.Serialization
 {
@@ -26,11 +26,11 @@ namespace Couchbase.Configuration.Server.Serialization
         }
 
 
-#if NET452
+//#if NET452
         protected BootstrapException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
-#endif
+//#endif
     }
 }
 

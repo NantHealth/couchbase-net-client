@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.Serialization;
 
 namespace Couchbase.Core
@@ -19,11 +19,11 @@ namespace Couchbase.Core
             : base(message, innerException)
         { }
 
-#if NET452
+//#if NET452
         protected FeatureNotAvailableException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         { }
-#endif
+//#endif
     }
 }
 

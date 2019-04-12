@@ -1,4 +1,4 @@
-﻿#if NET452
+//#if NET452
 using System.Configuration;
 
 namespace Couchbase.Configuration.Client.Providers
@@ -17,7 +17,7 @@ namespace Couchbase.Configuration.Client.Providers
     }
 }
 
-#endif
+//#endif
 
 #region [ License information          ]
 
